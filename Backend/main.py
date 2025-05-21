@@ -32,3 +32,7 @@ def scrape_images(data: URLRequest):
             all_images[url] = {"error": str(e)}
 
     return all_images
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
